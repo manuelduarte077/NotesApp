@@ -6,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "diamondcraft.devs.mynoteapp.android"
+    namespace = "manuelduarte077.dev.mynoteapp.android"
     compileSdk = 33
     defaultConfig {
-        applicationId = "diamondcraft.devs.mynoteapp.android"
+        applicationId = "manuelduarte077.dev.mynoteapp.android"
         minSdk = 23
         targetSdk = 33
         versionCode = 1
@@ -59,7 +59,7 @@ dependencies {
     kapt("com.google.dagger:hilt-android-compiler:2.44")
     kapt("androidx.hilt:hilt-compiler:1.0.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
-    implementation ("androidx.fragment:fragment-ktx:1.5.6")
+    implementation("androidx.fragment:fragment-ktx:1.5.6")
 
 
 }

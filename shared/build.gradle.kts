@@ -20,7 +20,7 @@ kotlin {
 
 
     sourceSets {
-        val commonMain by getting{
+        val commonMain by getting {
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
 
@@ -34,7 +34,7 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting{
+        val androidMain by getting {
             dependencies {
                 implementation("com.squareup.sqldelight:android-driver:1.5.5")
             }
@@ -63,13 +63,13 @@ kotlin {
         }
     }
 }
-sqldelight{
-    database("NoteDatabase"){
-        packageName = "diamondcraft.devs.mynoteapp.database"
+sqldelight {
+    database("NoteDatabase") {
+        packageName = "manuelduarte077.dev.mynoteapp.database"
     }
 }
 android {
-    namespace = "diamondcraft.devs.mynoteapp"
+    namespace = "manuelduarte077.dev.mynoteapp"
     compileSdk = 33
     defaultConfig {
         minSdk = 23
