@@ -1,13 +1,3 @@
-# Developer Info
-
-All copyright reserved @Nimesh Vasani
-
-[GitHub Profile](https://github.com/NimeshVasani)
-
-[Linked-In](https://www.linkedin.com/in/nimesh-vasani-99b642154/)
-
-[Stack Overflow](https://stackoverflow.com/users/16579306/nimesh-vasani)
-
 # About The App
 
 This is New Kotlin Multiplatform Multiverse(KMM) Note App. Which work as a Native App on both
@@ -99,11 +89,6 @@ Utilise Data coming from Dataase.
 
 import shared module in all classes in ios
 handle database response and errors.
-  <h1>
-<p align="center">
-  Thank You So much...!!!
-</p>
-</h1>
 
 
              
