@@ -7,7 +7,9 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.Colors
 import androidx.compose.material.FloatingActionButton
+import androidx.compose.material.FloatingActionButtonDefaults
 import androidx.compose.material.Icon
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -41,7 +43,7 @@ fun NoteListScreen(
         FloatingActionButton(
             onClick = {
                 navController.navigate("note_detail/-1L")
-            }, backgroundColor = Color.Black
+            }, backgroundColor = Color(0xff7885FF)
         ) {
             Icon(
                 imageVector = Icons.Default.Add,

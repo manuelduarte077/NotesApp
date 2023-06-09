@@ -37,7 +37,7 @@ fun HideableTextField(
             OutlinedTextField(
                 value = text,
                 onValueChange = onTextChange,
-                shape = RoundedCornerShape(50.dp),
+                shape = RoundedCornerShape(10.dp),
                 placeholder = { Text(text = "Search in Notes") },
                 modifier = Modifier
                     .fillMaxWidth()
