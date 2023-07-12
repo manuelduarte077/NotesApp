@@ -46,7 +46,7 @@ fun NoteListScreen(
                     Text(
                         text = "All Notes", style = TextStyle(
                             fontSize = 30.sp,
-                            fontWeight = FontWeight.Bold,
+                            fontWeight = FontWeight.SemiBold,
                             fontFamily = redHatFont,
                             color = Color(0xffffffff)
                         )
@@ -140,19 +140,18 @@ fun NoteListScreen(
                 items(items = state.notes, key = {
                     it.id!!
                 }) { note ->
-                    NoteItem(note = note, backgroundColor = Color(note.colorHex), onNoteClick = {
-                        navController.navigate("note_detail/${note.id}")
-                    }, onDeleteClick = {
-                        viewModel.deleteNoteById(note.id!!)
-                    }, modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(
-                            start = 20.dp,
-                            end = 20.dp,
-                            top = 20.dp,
-                            bottom = 10.dp
-                        )
-                        .animateItemPlacement()
+                    NoteItem(
+                        note = note, backgroundColor = Color(note.colorHex), onNoteClick = {
+                            navController.navigate("note_detail/${note.id}")
+                        }, modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(
+                                start = 20.dp,
+                                end = 20.dp,
+                                top = 20.dp,
+                                bottom = 10.dp
+                            )
+                            .animateItemPlacement()
                     )
                 }
             }

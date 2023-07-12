@@ -35,7 +35,6 @@ fun NoteItem(
     note: Note,
     backgroundColor: Color,
     onNoteClick: () -> Unit,
-    onDeleteClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val formattedDate = remember(note.createdAt) {
@@ -55,17 +54,12 @@ fun NoteItem(
             Text(
                 text = note.title,
                 style = TextStyle(
-                    fontWeight = FontWeight.Bold,
+                    fontWeight = FontWeight.SemiBold,
                     fontFamily = redHatFont,
                     fontSize = 20.sp,
                     color = Color.Black
                 ),
             )
-            Icon(imageVector = Icons.Default.Close,
-                contentDescription = "Delete Note",
-                modifier = Modifier.clickable(MutableInteractionSource(), null) {
-                    onDeleteClick()
-                })
         }
         Spacer(modifier = Modifier.height(16.dp))
         Text(
