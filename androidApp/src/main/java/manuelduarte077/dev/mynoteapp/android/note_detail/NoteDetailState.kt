@@ -6,6 +6,4 @@ data class NoteDetailState(
     val noteContent: String = "",
     val isNoteContentHintVisible: Boolean = false,
     val noteColor: Long = 0xFFFFFF
-
-) {
-}
+) {}

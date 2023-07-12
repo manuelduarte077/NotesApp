@@ -21,9 +21,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import manuelduarte077.dev.mynoteapp.android.redHatFont
 import manuelduarte077.dev.mynoteapp.domain.note.Note
 import manuelduarte077.dev.mynoteapp.domain.time.DateTimeSupport
 
@@ -32,20 +35,17 @@ fun NoteItem(
     note: Note,
     backgroundColor: Color,
     onNoteClick: () -> Unit,
-    onDeleteClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val formattedDate = remember(note.createdAt) {
         DateTimeSupport.formatNoteDate(note.createdAt)
     }
 
-    Column(
-        modifier = modifier
-            .clip(RoundedCornerShape(5.dp))
-            .background(backgroundColor)
-            .clickable { onNoteClick() }
-            .padding(16.dp)
-    ) {
+    Column(modifier = modifier
+        .clip(RoundedCornerShape(5.dp))
+        .background(backgroundColor)
+        .clickable { onNoteClick() }
+        .padding(16.dp)) {
         Row(
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically,
@@ -53,26 +53,33 @@ fun NoteItem(
         ) {
             Text(
                 text = note.title,
-                fontWeight = FontWeight.SemiBold,
-                fontSize = 20.sp,
-                maxLines = 1
-            )
-            Icon(
-                imageVector = Icons.Default.Close,
-                contentDescription = "Delete Note",
-                modifier = Modifier
-                    .clickable(MutableInteractionSource(), null) {
-                        onDeleteClick()
-                    }
+                style = TextStyle(
+                    fontWeight = FontWeight.SemiBold,
+                    fontFamily = redHatFont,
+                    fontSize = 20.sp,
+                    color = Color.Black
+                ),
             )
         }
         Spacer(modifier = Modifier.height(16.dp))
-        Text(text = note.content, fontWeight = FontWeight.Light)
+        Text(
+            text = note.content,
+            style = TextStyle(
+                fontWeight = FontWeight.Normal,
+                fontFamily = redHatFont,
+                fontSize = 16.sp,
+            ),
+            maxLines = 3, overflow = TextOverflow.Ellipsis,
+        )
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = formattedDate,
-            color = Color.DarkGray,
-            modifier = Modifier.align(Alignment.End)
+            style = TextStyle(
+                color = Color.DarkGray,
+                fontFamily = redHatFont,
+                fontSize = 14.sp,
+            ),
+            modifier = Modifier.align(Alignment.End),
         )
     }
 }

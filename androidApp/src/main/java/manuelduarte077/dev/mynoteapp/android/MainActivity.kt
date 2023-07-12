@@ -3,9 +3,6 @@ package manuelduarte077.dev.mynoteapp.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -37,23 +34,9 @@ class MainActivity : ComponentActivity() {
                     ) { backStackEntry ->
                         val noteId = backStackEntry.arguments?.getLong("noteId") ?: -1L
                         NoteDetailScreen(noteId = noteId, navController = navController)
-
                     }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    MyApplicationTheme {
-        GreetingView("Hello, Android!")
     }
 }

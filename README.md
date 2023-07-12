@@ -24,6 +24,14 @@ With : [Kotlin Multiplatform Multiverse- KMM](https://kotlinlang.org/docs/multip
 ,[Dagger Hilt](https://developer.android.com/training/dependency-injection/hilt-android) with
 Proper [NavigationUI](https://developer.android.com/guide/navigation/navigation-getting-started).
 
+# Demo
+
+## Screenshot
+
+![Notes](demo/ListNote.png) | ![Edit](demo/EditNote.png) | ![Create](demo/CreateNote.png) 
+-----------------------------------|----------------------------| ------------------------------------
+Notes                         | Edit                       | Create Note
+
 # Set Up For KMM Projects
 
 1. Goto `Android Studio` > `Setting` > `Plugins` > add `Kotlin Multiplatform Mobile`
