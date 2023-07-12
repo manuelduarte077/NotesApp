@@ -8,8 +8,8 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
-import manuelduarte077.dev.mynoteapp.domain.note.NoteDao
 import manuelduarte077.dev.mynoteapp.domain.note.Note
+import manuelduarte077.dev.mynoteapp.domain.note.NoteDao
 import manuelduarte077.dev.mynoteapp.domain.note.SearchInNotes
 import javax.inject.Inject
 
